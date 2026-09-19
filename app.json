@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Hábitos Saludables",
+    "slug": "app-habitos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMotionUsageDescription": "La app usa el acelerómetro para medir tu nivel de actividad física."
+      }
+    },
+    "android": {
+      "permissions": [
+        "ACTIVITY_RECOGNITION",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.carlosmvp.apphabitos"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Permitir que Hábitos Saludables mida tu actividad física con el acelerómetro."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Permitir que Hábitos Saludables use Face ID para proteger tus datos."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "58aab37b-683e-4fbb-ad3a-dd208edeb390"
+      }
+    }
+  }
+}
